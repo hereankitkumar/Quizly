@@ -123,7 +123,7 @@ result.style.display = 'none';
 say.style.display = 'none';
 // Function to load a question
 function loadQuestion() {
-    if (questionNo < 3) {
+    if (questionNo < questions.length) {
         let currentQuestion = questions[questionNo];
         // Set question and answer
         questionElement.innerHTML = currentQuestion.question;
