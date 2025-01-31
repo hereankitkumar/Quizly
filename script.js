@@ -148,16 +148,20 @@ function loadQuestion() {
 
 // Function to handle option selection
 optionElements.forEach(option => {
-   
-    option.addEventListener('click', (e) => {
-        say.style.display = 'none';
-        optionElements.forEach(opt => {
-        opt.classList.remove("selected")
-        opt.style.pointerEvents = 'auto'});
-        e.target.classList.add("selected");
-        e.target.style.pointerEvents = 'none';
-        selected = e.target.innerHTML;
-    });
+  const selectOption = (e) => {
+      say.style.display = 'none';
+      optionElements.forEach(opt => {
+          opt.classList.remove("selected");
+          opt.style.pointerEvents = 'auto';
+      });
+      e.target.classList.add("selected");
+      e.target.style.pointerEvents = 'none';
+      selected = e.target.innerHTML;
+  };
+  
+  // Use both 'click' and 'touchstart' for mobile and desktop
+  option.addEventListener('click', selectOption);
+  option.addEventListener('touchstart', selectOption);
 });
 
 // Function to check the answer
