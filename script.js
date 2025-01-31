@@ -123,7 +123,7 @@ result.style.display = 'none';
 say.style.display = 'none';
 // Function to load a question
 function loadQuestion() {
-    if (questionNo < questions.length) {
+    if (questionNo < 3) {
         let currentQuestion = questions[questionNo];
         // Set question and answer
         questionElement.innerHTML = currentQuestion.question;
@@ -148,10 +148,14 @@ function loadQuestion() {
 
 // Function to handle option selection
 optionElements.forEach(option => {
+   
     option.addEventListener('click', (e) => {
         say.style.display = 'none';
-        optionElements.forEach(opt => opt.classList.remove("selected"));
+        optionElements.forEach(opt => {
+        opt.classList.remove("selected")
+        opt.style.pointerEvents = 'auto'});
         e.target.classList.add("selected");
+        e.target.style.pointerEvents = 'none';
         selected = e.target.innerHTML;
     });
 });
