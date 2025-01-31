@@ -60,23 +60,37 @@ body {
 }
 
 .box #question {
+    height: 80px;
     margin-top: 16px;
     font-size: 18px;
     font-weight: 300;
     color: white;
 }
+.box #say{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+
+}
 .box .say{
+    background-color: #0033cc;
+    padding: 12px;
+    border-radius: 12px;
+    position: absolute;
     text-align: center;
-    margin: 20px 2px;
+    align-self: center;
+    margin: 10px auto 40px auto;
+    margin-bottom: 30px;
     font-size: 16px;
-    font-weight: 300;       
+    font-weight: 300;      
+    box-shadow: 5px 5px 15px rgba(0, 0, 255, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.05);
 }
 .answerBox {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -99,7 +113,6 @@ body {
     transform: scale(1.05);
     background: linear-gradient(145deg, #3a3a3a, #252525);
 }
-
 .selected {
     background: linear-gradient(145deg, #0fd850, #02a12d);
     color: black;
@@ -126,33 +139,29 @@ body {
 }
 
 .result {
-    width: 100%;
-    margin: 20px 0;
+    margin: 30px 2px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.result h3, .result p {
-    color: white;
-    margin-top: 5px;
+.result h3{
+    font-size: 1rem;
     font-weight: 300;
 }
-
 .show {
     text-align: center;
     background: linear-gradient(145deg, #333333, #1e1e1e);
     width: 100%;
-    margin: 0px 20px;
+    margin: 0px 10px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 16px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6), -8px -8px 20px rgba(255, 255, 255, 0.05);
 }
 
 .result p {
     width: 100%;
     padding-top: 30px;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
 }
